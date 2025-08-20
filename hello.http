@@ -1,0 +1,27 @@
+# HTTP FILE BY POSTBOY
+
+@baseUrl = https://fooapi.com/api
+
+### Get user by ID
+GET {{baseUrl}}/users/1
+Accept: application/json
+
+### Get post by ID
+GET {{baseUrl}}/post/1
+Accept: application/json
+
+### Update todo by ID
+PUT {{baseUrl}}/todos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "todo": "Foo content",
+  "state": "Working",
+  "closed": true,
+  "userId": "1"
+}
+
+### Delete movie by ID
+DELETE {{baseUrl}}/movies/1
+Accept: application/json
