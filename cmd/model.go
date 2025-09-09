@@ -275,11 +275,34 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.methodField.SetValue(strings.ToUpper(newReq.method))
 				m.urlField.SetValue(newReq.endpoint)
 				m.bodyArea.SetValue(newReq.body)
-				// m.paramsTable.SetValue(newReq.params)
 				m.headersArea.SetValue(newReq.headers)
 				m.paramsTable = NewParamsTable()
 				m.paramsTable.width = m.tabContentWidth
 				return m, nil
+			}
+		case "r":
+			// Remove the current request if more than one exists
+			if m.focused == requestsListPanel {
+				if len(m.requestsList.Items()) > 1 {
+					idx := m.requestsList.Index()
+					m.requestsList.RemoveItem(idx)
+					// Select the previous item if possible, otherwise the first
+					if idx > 0 {
+						m.requestsList.Select(idx - 1)
+					} else {
+						m.requestsList.Select(0)
+					}
+					// Update fields to match the selected request
+					if item, ok := m.requestsList.SelectedItem().(request); ok {
+						m.nameField.SetValue(item.Title())
+						m.methodField.SetValue(strings.ToUpper(item.Method()))
+						m.urlField.SetValue(item.Endpoint())
+						m.bodyArea.SetValue(item.Body())
+						m.headersArea.SetValue(item.Headers())
+						m.paramsTable = NewParamsTable()
+						m.paramsTable.width = m.tabContentWidth
+					}
+				}
 			}
 		}
 	}
@@ -318,7 +341,6 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.nameField.SetValue(item.Title())
 			m.methodField.SetValue(strings.ToUpper(item.Method()))
 			m.urlField.SetValue(item.Endpoint())
-			// m.paramsTable.SetValue(item.Params())
 			m.bodyArea.SetValue(item.Body())
 			m.headersArea.SetValue(item.Headers())
 			// Sync paramsTable to selected request
