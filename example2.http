@@ -1,0 +1,12 @@
+### ||| POSTBOY |||
+### Global Variables
+@env = fooapi.com/api
+@pro = https
+
+### just a get
+GET {{pro}}://{{env}}/users
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json
+
