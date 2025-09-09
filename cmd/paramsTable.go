@@ -27,9 +27,7 @@ func NewParamsTable() ParamsTable {
 		ValueInput: textinput.New(),
 	}
 	row.KeyInput.Placeholder = "Key"
-	row.KeyInput.Prompt = ""
 	row.ValueInput.Placeholder = "Value"
-	row.ValueInput.Prompt = ""
 	row.KeyInput.CharLimit = 26
 	row.ValueInput.CharLimit = 26
 	row.KeyInput.Focus()
@@ -50,9 +48,7 @@ func (t *ParamsTable) AddRow() {
 		ValueInput: textinput.New(),
 	}
 	row.KeyInput.Placeholder = "Key"
-	row.KeyInput.Prompt = ""
 	row.ValueInput.Placeholder = "Value"
-	row.ValueInput.Prompt = ""
 	row.KeyInput.CharLimit = 26
 	row.ValueInput.CharLimit = 26
 	t.Rows = append(t.Rows, row)
@@ -168,9 +164,7 @@ func (t *ParamsTable) SetFromQueryString(query string) {
 			ValueInput: textinput.New(),
 		}
 		row.KeyInput.Placeholder = "Key"
-		row.KeyInput.Prompt = ""
 		row.ValueInput.Placeholder = "Value"
-		row.ValueInput.Prompt = ""
 		row.KeyInput.CharLimit = 26
 		row.ValueInput.CharLimit = 26
 		row.KeyInput.SetValue(key)
