@@ -84,7 +84,7 @@ func NewModel(filepath string) Model {
 	m.urlField.Placeholder = "Endpoint"
 	m.urlField.Focus()
 	m.urlField.Prompt = " "
-	m.urlField.PromptStyle.Foreground(red)
+	m.urlField.PromptStyle.Foreground(yellow)
 	m.urlField.Cursor.Blink = true
 
 	m.methodField = textinput.New()
@@ -126,13 +126,13 @@ func NewModel(filepath string) Model {
 	m.requestsList.SetStatusBarItemName("request", "requests")
 	m.requestsList.SetWidth(37)
 	m.requestsList.Styles.Title = lipgloss.NewStyle().
-		Foreground(lipgloss.Color(red.Dark)).
+		Foreground(lipgloss.Color(yellow.Dark)).
 		Bold(true).
 		Padding(0, 1).
 		Align(lipgloss.Center).
 		Width(m.requestsList.Width()).
 		Border(lipgloss.ThickBorder(), false, false, true, false).
-		BorderForeground(lipgloss.Color(red.Dark))
+		BorderForeground(lipgloss.Color(yellow.Dark))
 	m.requestsList.SetShowHelp(false)
 	m.requestsList.SetFilteringEnabled(false)
 
@@ -140,9 +140,7 @@ func NewModel(filepath string) Model {
 	m.paramsTable = NewParamsTable()
 	m.bodyArea = newTextarea()
 	m.bodyArea.Placeholder = `
-{ 
-	"your":"body" 
-}`
+{ "your":"body" }`
 	m.headersArea = newTextarea()
 	m.headersArea.SetValue(createHeaders())
 
@@ -155,7 +153,6 @@ func NewModel(filepath string) Model {
 	m.spinner = spinner.New()
 	m.spinner.Spinner = spinner.Points
 	m.spinner.Style = spinnerStyle
-	m.message = m.appBoundaryView("Ctrl+c to quit, Ctrl+h for help")
 	m.loading = false
 
 	return m
@@ -180,6 +177,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.bodyArea.MaxWidth = m.tabContentWidth
 		m.paramsTable.width = m.tabContentWidth
 		m.headersArea.MaxWidth = m.tabContentWidth
+		m.message = m.appBoundaryView("Ctrl+c to quit, Ctrl+h for help")
 	case tea.KeyMsg:
 		switch keypress := msg.String(); keypress {
 		case "ctrl+c":
@@ -550,10 +548,10 @@ func (m Model) View() string {
 	methodInput := methodStyle.Width(9).Height(1).Render(m.methodField.View())
 
 	// Render the URL input field
-	urlStyle := borderStyle.Foreground(red)
+	urlStyle := borderStyle.Foreground(yellow)
 	if m.focused == urlFieldPanel {
 		m.urlField.Focus()
-		urlStyle = focusedBorder.Foreground(red)
+		urlStyle = focusedBorder.Foreground(yellow)
 	} else {
 		m.urlField.Blur()
 	}
@@ -601,7 +599,7 @@ func (m Model) View() string {
 		spinnerView := m.spinner.View()
 		footer = " " + spinnerView + " " + m.appBoundaryMessage(m.message)
 	} else {
-		footer = lipgloss.PlaceHorizontal(m.width, lipgloss.Left, m.styles.HeaderText.Render(" "+m.message), lipgloss.WithWhitespaceChars("|"), lipgloss.WithWhitespaceForeground(indigo))
+		footer = m.appBoundaryMessage(m.message)
 	}
 
 	return m.styles.Base.Render(fullBodyWithList + "\n" + footer)

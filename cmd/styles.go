@@ -5,7 +5,7 @@ import "github.com/charmbracelet/lipgloss"
 const maxWidth = 80
 
 var (
-	red    = lipgloss.AdaptiveColor{Light: "#d72121ff", Dark: "#d79921"}
+	yellow = lipgloss.AdaptiveColor{Light: "#d79921", Dark: "#d79921"}
 	indigo = lipgloss.AdaptiveColor{Light: "#458588", Dark: "#458588"}
 	green  = lipgloss.AdaptiveColor{Light: "#8ec07c", Dark: "#8ec07c"}
 	white  = lipgloss.AdaptiveColor{Light: "#d1d1d1ff", Dark: "#e5e5e5ff"}
@@ -75,7 +75,7 @@ var (
 			Border(lipgloss.RoundedBorder()).
 			BorderForeground(indigo)
 
-	focusedBorder      = lipgloss.NewStyle().Border(lipgloss.NormalBorder(), true).BorderForeground(red)
+	focusedBorder      = lipgloss.NewStyle().Border(lipgloss.NormalBorder(), true).BorderForeground(yellow)
 	responseTitleStyle = lipgloss.NewStyle().Background(indigo).Foreground(lipgloss.Color("230"))
 )
 
@@ -94,7 +94,7 @@ func NewStyles(lg *lipgloss.Renderer) *Styles {
 	s.Base = lg.NewStyle().
 		Padding(0, 0, 0, 0)
 	s.HeaderText = lg.NewStyle().
-		Foreground(red).
+		Foreground(yellow).
 		Bold(true).
 		Padding(0, 1, 0, 0)
 	s.HeaderDecoration = lg.NewStyle().
@@ -141,7 +141,7 @@ func (m Model) appBoundaryView(text string) string {
 }
 
 func (m Model) appBoundaryMessage(text string) string {
-	return lipgloss.PlaceHorizontal(m.width, lipgloss.Left, m.styles.HeaderText.Render(" "+text), lipgloss.WithWhitespaceChars("|"), lipgloss.WithWhitespaceForeground(red))
+	return lipgloss.PlaceHorizontal(m.width, lipgloss.Left, m.styles.HeaderText.Render(" "+text), lipgloss.WithWhitespaceChars("/"), lipgloss.WithWhitespaceForeground(yellow))
 }
 
 func (m env) appTopLabel(text string) string {
