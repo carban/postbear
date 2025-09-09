@@ -1,0 +1,13 @@
+### ||| POSTBOY |||
+### Global Variables
+@env = wwwwwwwwwwwwwwww
+
+### dddd
+PATCH https://fooapi.com/api/todos/7?asdasda=asdasda&ssss=ffffff
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json
+
+{"todo":"wwww"}
+
