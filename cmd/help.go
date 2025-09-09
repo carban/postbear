@@ -10,10 +10,14 @@ import (
 
 const commandsContent = `tab = Move Around
 shift + tab = Reverse Tab								
-ctrl + n = New Request
-ctrl + s = Save Requests in a .http file
+n = New Request (in requests list panel)
+r = Remove Request (in requests list panel)
 enter = Send Request
+ctrl + s = Save Requests in a .http file
 shift + Arrow Keys = Change Tabs (Params/Body/Header)
+enter = Move from key input to value input (in Params tab)
+enter = Add a new row from value input (in Params tab)
+key up / key down = move around params (in Params tab)
 ctrl + e = Open Environment Variables page
 ctrl + h = Open Help page
 ctrl + c = Quit`
