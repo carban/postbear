@@ -54,12 +54,15 @@ func (d itemDelegate) Render(w io.Writer, m list.Model, index int, listItem list
 	case "GET":
 		methodStyle = getMethodStyle
 		methodInactiveStyle = getMethodInactiveStyle
+		desc = " " + desc + " "
 	case "POST":
 		methodStyle = postMethodStyle
 		methodInactiveStyle = postMethodInactiveStyle
+		desc = " " + desc + " "
 	case "PUT":
 		methodStyle = putMethodStyle
 		methodInactiveStyle = putMethodInactiveStyle
+		desc = " " + desc + " "
 	case "PATCH":
 		methodStyle = patchMethodStyle
 		methodInactiveStyle = patchMethodInactiveStyle
@@ -69,9 +72,11 @@ func (d itemDelegate) Render(w io.Writer, m list.Model, index int, listItem list
 	case "INFO":
 		methodStyle = infoMethodStyle
 		methodInactiveStyle = infoMethodInactiveStyle
+		desc = " " + desc + " "
 	default:
 		methodStyle = otherMethodStyle
 		methodInactiveStyle = otherMethodInactiveStyle
+		desc = " " + desc + " "
 	}
 
 	// Prevent text from exceeding list width
@@ -84,7 +89,7 @@ func (d itemDelegate) Render(w io.Writer, m list.Model, index int, listItem list
 		}
 		lines = append(lines, ansi.Truncate(line, textwidth, "…"))
 	}
-	desc = strings.Join(lines, "\n")
+	// desc = strings.Join(lines, "\n")
 
 	// Render method with color
 	methodRender := methodStyle.Render(desc)

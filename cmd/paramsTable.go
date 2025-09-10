@@ -28,8 +28,8 @@ func NewParamsTable() ParamsTable {
 	}
 	row.KeyInput.Placeholder = "Key"
 	row.ValueInput.Placeholder = "Value"
-	row.KeyInput.CharLimit = 26
-	row.ValueInput.CharLimit = 26
+	row.KeyInput.CharLimit = 20
+	row.ValueInput.CharLimit = 20
 	row.KeyInput.Focus()
 	return ParamsTable{
 		Rows:       []TableRow{row},
@@ -49,8 +49,8 @@ func (t *ParamsTable) AddRow() {
 	}
 	row.KeyInput.Placeholder = "Key"
 	row.ValueInput.Placeholder = "Value"
-	row.KeyInput.CharLimit = 26
-	row.ValueInput.CharLimit = 26
+	row.KeyInput.CharLimit = 20
+	row.ValueInput.CharLimit = 20
 	t.Rows = append(t.Rows, row)
 	t.FocusedRow = len(t.Rows) - 1
 	t.FocusedCol = 0
@@ -165,8 +165,8 @@ func (t *ParamsTable) SetFromQueryString(query string) {
 		}
 		row.KeyInput.Placeholder = "Key"
 		row.ValueInput.Placeholder = "Value"
-		row.KeyInput.CharLimit = 26
-		row.ValueInput.CharLimit = 26
+		row.KeyInput.CharLimit = 20
+		row.ValueInput.CharLimit = 20
 		row.KeyInput.SetValue(key)
 		row.ValueInput.SetValue(val)
 		t.Rows = append(t.Rows, row)
@@ -195,7 +195,7 @@ func (t *ParamsTable) View() string {
 		}
 		keyView := keyStyle.Render(row.KeyInput.View())
 		valueView := valueStyle.Render(row.ValueInput.View())
-		b.WriteString(lipgloss.JoinHorizontal(lipgloss.Left, keyView, valueView))
+		b.WriteString(lipgloss.JoinHorizontal(lipgloss.Center, keyView, valueView) + "\n")
 	}
 	return b.String()
 }

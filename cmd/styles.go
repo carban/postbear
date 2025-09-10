@@ -5,7 +5,7 @@ import "github.com/charmbracelet/lipgloss"
 const maxWidth = 80
 
 var (
-	yellow = lipgloss.AdaptiveColor{Light: "#d79921", Dark: "#d79921"}
+	yellow = lipgloss.AdaptiveColor{Light: "#17be17ff", Dark: "#17be17ff"}
 	indigo = lipgloss.AdaptiveColor{Light: "#458588", Dark: "#458588"}
 	green  = lipgloss.AdaptiveColor{Light: "#8ec07c", Dark: "#8ec07c"}
 	white  = lipgloss.AdaptiveColor{Light: "#d1d1d1ff", Dark: "#e5e5e5ff"}
