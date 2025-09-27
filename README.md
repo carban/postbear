@@ -13,9 +13,20 @@ go build -o postbear
 ```
 
 ## Usage
+TUI mode
+```bash
+postbear
+```
+Read .http file
+```bash
+postbear read [.http filepath]
+```
+CLI mode
+```bash
+postbear run [method] [endpoint]
+``` 
 
-
-##Examples
+## Examples
 
 TUI Mode
 ![image1](https://github.com/carban/padfadfasboy/blob/main/images/1.gif?raw=true)
