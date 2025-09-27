@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"postboy/cmd"
+	"postbear/cmd"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -24,7 +24,7 @@ func runTUI(filePath string) {
 func runTUIWithFile(filePath string) {
 	data, err := cmd.LoadHTTPFile(filePath)
 	if err != nil || len(data.Requests) == 0 {
-		// Remove postboy.http if exists to force dummy request
+		// Remove postbear.http if exists to force dummy request
 		runTUI(filePath)
 		return
 	}

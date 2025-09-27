@@ -25,7 +25,7 @@ type HTTPFileData struct {
 // Serialize HTTPFileData to .http file format
 func (h *HTTPFileData) ToHTTPFileFormat() string {
 	var sb strings.Builder
-	sb.WriteString("### ||| POSTBOY |||\n")
+	sb.WriteString("### ||| POSTBEAR |||\n")
 	// Write global variables
 	if len(h.GlobalVars) > 0 {
 		sb.WriteString("### Global Variables\n")
@@ -93,7 +93,7 @@ func SaveHTTPFile(data *HTTPFileData, filename string) error {
 	return os.WriteFile(path, []byte(content), 0644)
 }
 
-// LoadGlobalVarsFromHTTPFile loads global variables from the postboy.http file
+// LoadGlobalVarsFromHTTPFile loads global variables from the postbear.http file
 func LoadGlobalVarsFromHTTPFile(filename string) map[string]string {
 	vars := make(map[string]string)
 	cwd, err := os.Getwd()

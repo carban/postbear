@@ -1,4 +1,4 @@
-module postboy
+module postbear
 
 go 1.23.1
 

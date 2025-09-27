@@ -1,15 +1,15 @@
-### ||| POSTBOY |||
+### ||| POSTBEAR |||
 ### Global Variables
+@var3 = world
 @var1 = 01010101
 @var2 = hello
-@var3 = world
 
 ### list users
-GET https://fooapi.com/api/users?aasdas=asdasda&sadsadsa=asdasda
-Content-Type: application/json
-Accept: */*
+GET https://fooapi.com/api/users?param1=value1&param2=value2
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
+Content-Type: application/json
+Accept: */*
 
 ### edit todo
 PATCH https://fooapi.com/api/todos/7
@@ -18,14 +18,14 @@ Content-Type: application/json
 Accept: */*
 Accept-Encoding: gzip, deflate, br
 
-{"todo":"wwww"}
+{"todo":"Do homework"}
 
-### Delete song
+### delete song
 DELETE https://fooapi.com/api/songs/34
+Accept: */*
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Content-Type: application/json
-Accept: */*
 
 ### invalid request
 INFO https://fooapi.com/api/movies

@@ -122,7 +122,7 @@ func NewModel(filepath string) Model {
 	}
 	m.requestsList = list.New(items, itemDelegate{}, 0, 0)
 
-	m.requestsList.Title = "POSTBOY"
+	m.requestsList.Title = "POSTBEAR"
 	m.requestsList.SetStatusBarItemName("request", "requests")
 	m.requestsList.SetWidth(37)
 	m.requestsList.Styles.Title = lipgloss.NewStyle().
