@@ -14,6 +14,18 @@ go build -o postbear
 
 ## Usage
 
+
+##Examples
+
+TUI Mode
+![image1](https://github.com/carban/padfadfasboy/blob/main/images/1.gif?raw=true)
+
+TUI Mode reading .http file
+![image2](https://github.com/carban/padfadfasboy/blob/main/images/2.gif?raw=true)
+
+CLI Mode
+![image3](https://github.com/carban/padfadfasboy/blob/main/images/3.gif?raw=true)
+
 ## Contributing
 
 This is a personal project any feedback is welcome. for major changes, please open an issue first
