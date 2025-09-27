@@ -37,6 +37,10 @@ TUI Mode reading .http file
 CLI Mode
 ![image3](https://github.com/carban/padfadfasboy/blob/main/images/3.gif?raw=true)
 
+## Acknowledgement
+
+This project were inspired by [Gostman](https://github.com/HalfToothed/gostman)
+
 ## Contributing
 
 This is a personal project any feedback is welcome. for major changes, please open an issue first
