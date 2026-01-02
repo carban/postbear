@@ -32,6 +32,8 @@ postbear run [method] [endpoint]
 
 ## Examples
 
+All the examples here uses [fooapi.com](https://fooapi.com/) an API created by me some months ago. The platform provides realistic dummy data across several categories, which you can use to mock your projects and ideas. Here is the [repo](https://github.com/carban/fooapi)
+
 TUI Mode
 ![image1](https://github.com/carban/padfadfasboy/blob/main/images/1.gif?raw=true)
 
