@@ -2,6 +2,10 @@
 
 Postbear is the Postman alternative in your terminal
 
+<img width="1536" height="672" alt="image" src="https://github.com/user-attachments/assets/3b6bffbc-a308-42d4-a4d4-2d90f90037f4" />
+
+---
+
 <img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/dd4a12aa-3c47-4dc2-a7b7-aa48d3679beb" />
 
 ## Installation
