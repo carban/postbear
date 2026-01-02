@@ -64,5 +64,6 @@ This project were inspired by [Gostman](https://github.com/HalfToothed/gostman)
 This is a personal project any feedback is welcome. for major changes, please open an issue first
 to discuss what you would like to change.
 
-
 ## License
+
+MIT License
