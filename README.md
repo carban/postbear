@@ -37,6 +37,24 @@ TUI Mode reading .http file
 CLI Mode
 ![image3](https://github.com/carban/padfadfasboy/blob/main/images/3.gif?raw=true)
 
+## Command List
+
+| **Command**        	| **Description**                                    	|
+|--------------------	|----------------------------------------------------	|
+| tab                	| Move Around                                        	|
+| shift + tab        	| Reverse Tab                                        	|
+| n                  	| New Request (in requests list panel)               	|
+| r                  	| Remove Request (in requests list panel)            	|
+| enter              	| Send Request                                       	|
+| ctrl + s           	| Save Request in a .http file                       	|
+| shift + Arrow Keys 	| Change Tabs (Params/Body/Header)                   	|
+| enter              	| Move from key input to value input (in Params tab) 	|
+| enter              	| Add a new row from value input (in Params tab)     	|
+| key up / key down  	| Move around params (in Params tab)                 	|
+| ctrl + e           	| Open Environment Variables page                    	|
+| ctrl + h           	| Open Help Page                                     	|
+| ctrl + c           	| Quit                                               	|
+
 ## Acknowledgement
 
 This project were inspired by [Gostman](https://github.com/HalfToothed/gostman)
