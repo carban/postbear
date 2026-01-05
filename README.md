@@ -15,7 +15,7 @@ You have two options to use Postbear:
 1. Just run in your terminal:
 
 ```bash
-go install github.com/carban/postbear
+go install github.com/carban/postbear@latest
 ```
 
 2. Or clone this repo and build the code with:
