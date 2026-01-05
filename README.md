@@ -10,7 +10,15 @@ Postbear is the Postman alternative in your terminal
 
 ## Installation
 
-You can clone this repo and run
+You have two options to use Postbear:
+
+1. Just run in your terminal:
+
+```bash
+go install github.com/carban/postbear
+```
+
+2. Or clone this repo and build the code with:
 
 ```bash
 go build -o postbear
