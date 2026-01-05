@@ -1,4 +1,4 @@
-module postbear
+module github.com/carban/postbear
 
 go 1.23.1
 

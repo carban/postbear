@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"postbear/cmd"
+	"github.com/carban/postbear/cmd"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
