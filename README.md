@@ -36,27 +36,27 @@ You have two options to use Postbear:
 
 1. Just run in your terminal:
 
-```bash
+```console
 go install github.com/carban/postbear@latest
 ```
 
 2. Or clone this repo and build the code with:
 
-```bash
+```console
 go build -o postbear
 ```
 
 ## Usage
 TUI mode
-```bash
+```console
 postbear
 ```
 Read .http file
-```bash
+```console
 postbear read [.http filepath]
 ```
 CLI mode
-```bash
+```console
 postbear run [method] [endpoint]
 ``` 
 
