@@ -1,12 +1,34 @@
 # Postbear
 
-Postbear is the Postman alternative in your terminal
+Postbear is a high-speed, lightweight API client designed for developers who live in the command line. No heavy Electron apps, just simplicity.
 
 <img width="1536" height="672" alt="image" src="https://github.com/user-attachments/assets/3b6bffbc-a308-42d4-a4d4-2d90f90037f4" />
 
 ---
 
 <img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/dd4a12aa-3c47-4dc2-a7b7-aa48d3679beb" />
+
+## Why?
+
+⚡ Fast: Starts instantly. No splash screens, no loading bars.
+
+🪶 Minimalist: Small footprint, ready to go.
+
+🛠️ Powerful: Handles headers, body data, parameters, and support to .http files.
+
+💻 Terminal-First: Built for the modern dev workflow.
+
+
+|       Feature       	| **Postman** 	| **Insomnia** 	| **HTTPie** 	| **curl** 	| **Postbear** 	|
+|:-------------------:	|-------------	|--------------	|------------	|----------	|--------------	|
+| Terminal-native     	| ❌           	| ❌            	| ✅          	| ✅        	| ✅            	|
+| Interactive TUI     	| ❌           	| ❌            	| ❌          	| ❌        	| ✅            	|
+| Syntax highlighting 	| ✅           	| ✅            	| ✅          	| ❌        	| ✅            	|
+| Save collections    	| ✅           	| ✅            	| ❌          	| ❌        	| ✅            	|
+| Zero install        	| ❌           	| ❌            	| ❌          	| ✅        	| ✅            	|
+| .http support       	| ❌           	| ❌            	| ❌          	| ❌        	| ✅            	|
+| Size                	| ~500MB      	| ~300MB       	| ~50MB      	| <5MB     	| ~12MB        	|
+| Startup time        	| ~3s         	| ~2s          	| <1s        	| instant  	| instant      	|
 
 ## Installation
 
@@ -71,7 +93,7 @@ CLI Mode
 
 ## Acknowledgement
 
-This project were inspired by [Gostman](https://github.com/HalfToothed/gostman)
+This project were inspired by [Gostman](https://halftoothed.github.io/gostman/)
 
 ## Contributing
 
