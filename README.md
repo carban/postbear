@@ -1,8 +1,9 @@
-# Postbear
-
-Postbear is a high-speed, lightweight API client designed for developers who live in the command line. No heavy Electron apps, just simplicity.
-
-<img width="1536" height="672" alt="image" src="https://github.com/user-attachments/assets/3b6bffbc-a308-42d4-a4d4-2d90f90037f4" />
+<div align="center">
+  <img width="230" height="230" alt="Gemini_Generated_Image_8fr108fr108fr108(1)" src="https://github.com/user-attachments/assets/6eeeb5c6-506a-440f-b19d-9caf78356ac1" />
+  <h1>Postbear</h1>
+  <p>Postbear is a high-speed, lightweight API client designed for developers who live in the command line.</p>
+  <p>No heavy Electron apps, just simplicity.</p>
+</div>
 
 ---
 
